@@ -3,7 +3,7 @@
 ## Setup Instructions
 
 # 1. Clone the repository:
-git clone <repository_url>
+git clone <repository_url> 
 cd FLASK-PROJ
 
 # 2. Install dependencies:
