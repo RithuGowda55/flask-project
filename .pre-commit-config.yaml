@@ -1,20 +1,20 @@
 repos:
   # Black code formatter
   - repo: https://github.com/psf/black
-    rev: 25.1.0  # Use the specific version of Black
+    rev: 25.1.0 
     hooks:
       - id: black
 
   # Ruff linter
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.9.7  # Use the specific version of Ruff
+    rev: v0.9.7 
     hooks:
       - id: ruff
         args: ["--fix", "--line-length=88"]
 
   # Pre-commit hook itself
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0  # Use the latest stable version
+    rev: v5.0.0  
     hooks:
       - id: check-yaml  # Checks YAML file syntax
       - id: end-of-file-fixer  # Ensures files end with a newline
