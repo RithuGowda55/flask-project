@@ -3,8 +3,7 @@
 ## Setup Instructions
 
 # 1. Clone the repository:
-git clone <repository_url> 
-cd FLASK-PROJ
+git clone https://github.com/RithuGowda55/flask-project.git
 
 # 2. Install dependencies:
 Using Poetry:
