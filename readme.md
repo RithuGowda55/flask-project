@@ -17,12 +17,7 @@ Move to the app directory and run the app on port 5000:
 cd app
 flask --app app run --port 5000
 
-# 5. Run Unit Tests:
-Move to the test directory and run the tests on port 5001:
-cd test
-flask --app log_data run --port 5001
-
-# 6. Run Pre-commit Hooks:
+# 5. Run Pre-commit Hooks:
 To ensure code quality and style consistency, run pre-commit hooks:
 pre-commit run --all-files
 
