@@ -1,0 +1,20 @@
+2025-02-23 09:10:15,791 - INFO - Query executed successfully: 
+            CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                first_name TEXT NOT NULL,
+                last_name TEXT NOT NULL,
+                company_name TEXT,
+                email TEXT NOT NULL UNIQUE,
+                city TEXT,
+                state TEXT,
+                zip INTEGER,
+                web TEXT,
+                age INTEGER
+            )
+        
+2025-02-23 09:11:53,022 - ERROR - Error during database initialization: [Errno 2] No such file or directory: 'users.json'
+2025-02-23 09:12:48,775 - ERROR - Error during database initialization: [Errno 2] No such file or directory: 'users.json'
+2025-02-23 09:19:06,323 - INFO - Attempting to open JSON file at: /Users/druthigs/Desktop/Flask-proj/app/test/../users.json
+2025-02-23 09:19:06,323 - ERROR - Error during database initialization: [Errno 2] No such file or directory: '/Users/druthigs/Desktop/Flask-proj/app/test/../users.json'
+2025-02-23 09:19:16,941 - INFO - Attempting to open JSON file at: /Users/druthigs/Desktop/Flask-proj/app/test/../users.json
+2025-02-23 09:19:16,941 - ERROR - Error during database initialization: [Errno 2] No such file or directory: '/Users/druthigs/Desktop/Flask-proj/app/test/../users.json'
