@@ -1,8 +1,8 @@
-2025-02-23 09:23:27,194 - INFO - Executing query: 
+2025-02-23 09:23:27,194 - INFO - Executing query:
             INSERT INTO users (first_name, last_name, company_name, email, city, state, zip, web, age)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (email) DO NOTHING
-        
+
 2025-02-23 09:23:27,194 - INFO - User data: {'id': 1, 'first_name': 'James', 'last_name': 'Butt', 'company_name': 'Benton, John B Jr', 'city': 'New Orleans', 'state': 'LA', 'zip': 70116, 'email': 'jbutt@gmail.com', 'web': 'http://www.bentonjohnbjr.com', 'age': 70}
 2025-02-23 09:23:27,196 - INFO - Inserted row for user: jbutt@gmail.com
 2025-02-23 09:23:27,196 - INFO - User data: {'id': 2, 'first_name': 'Josephine', 'last_name': 'Darakjy', 'company_name': 'Chanay, Jeffrey A Esq', 'city': 'Brighton', 'state': 'MI', 'zip': 48116, 'email': 'josephine_darakjy@darakjy.org', 'web': 'http://www.chanayjeffreyaesq.com', 'age': 48}

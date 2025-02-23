@@ -10,7 +10,7 @@ DB_CONFIG = {
     "host": "localhost",
     "dbname": "postgres2",
     "user": "postgres",
-    "password": "Oscar@123"
+    "password": "Oscar@123",
 }
 
 # Initialize PostgreSQL Connection Pool
@@ -18,23 +18,25 @@ db_pool = psycopg2.pool.SimpleConnectionPool(1, 10, **DB_CONFIG)
 
 # Configure logging to log to createTable.log file
 logging.basicConfig(
-    filename='createTable.log',
+    filename="createTable.log",
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format="%(asctime)s - %(levelname)s - %(message)s",
 )
+
 
 # PostgreSQL connection management
 def get_db_connection():
-    if 'db' not in g:
+    if "db" not in g:
         g.db = db_pool.getconn()
     return g.db
+
 
 # Initialize database (Create tables)
 def init_db():
     with app.app_context():  # Create app context
         conn = get_db_connection()
         cursor = conn.cursor()
-        
+
         create_table_query = """
             CREATE TABLE IF NOT EXISTS users (
                 id SERIAL PRIMARY KEY,
@@ -49,7 +51,7 @@ def init_db():
                 age INTEGER
             )
         """
-        
+
         try:
             cursor.execute(create_table_query)
             conn.commit()
@@ -59,5 +61,6 @@ def init_db():
         finally:
             conn.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     init_db()
