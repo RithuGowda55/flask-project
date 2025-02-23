@@ -30,7 +30,7 @@ pre-commit run --all-files
 
 
 #  API Usage Examples
- 
+
 BASE_URL="http://127.0.0.1:5000/api/users"
 
 # 1. 📝 List Users with Pagination, Search, and Sorting

@@ -1,0 +1,20 @@
+1. How long did it take you?
+The task took me around 3 to 4 days to complete. This was due to the fact that there were many unfamiliar concepts that I had to learn from scratch. The majority of my time was spent acquiring new knowledge and understanding how to implement these concepts. There was also time spent on resolving issues, especially when applying the learned concepts to the project.
+
+2. What was most challenging?
+The most challenging part was dealing with complex logic, debugging, and integrating APIs. While I was relatively familiar with SQL queries, the operational side was easier to handle. However, some of the errors I encountered were not immediately clear, which required additional debugging. Moreover, learning to use new tools, particularly for API integration and Docker, posed its own set of challenges.
+
+3. What was unclear?
+One unclear aspect was how to use Docker efficiently within the project. Although I understood the basic concept, I wasn’t sure how to integrate it effectively and use it to its full potential. Docker can significantly simplify processes, but I found that due to time constraints and limited experience with containers, I couldn’t leverage it as much as I would have liked in this project.
+
+4. Any unexpected challenges?
+One unexpected challenge was my initial misconception about Docker. I assumed that it would be easy to master in a single day, but I quickly realized that Docker requires a more thorough study to truly understand its benefits and usage. To make the most of Docker, I need more hands-on experience, and I plan to work on more projects that incorporate Docker and similar tools to become more familiar with them.
+
+5. Is the difficulty appropriate?
+Yes, the difficulty was appropriate for the task. While it was challenging, it helped enhance my problem-solving skills. It provided a good balance, being neither too easy nor too overwhelming, and pushed me to grow my knowledge in areas I was less familiar with, making it a valuable learning experience.
+
+6. Why the chosen tools?
+I chose tools like Poetry, Black, Ruff, Flask, and CORS because they are well-suited for the task at hand. These tools are widely used in the industry, efficient, and have strong community support. They helped me streamline my development process, ensuring my project was both maintainable and scalable. Additionally, using tools like Flask for the backend and Poetry for dependency management allowed for an organized and structured development environment.
+
+7. Any assumptions or decisions made?
+No major assumptions were made during the project, as the problem statements were clear and provided all the necessary requirements. I made decisions based on the information available, and did not assume anything beyond what was explicitly stated. Any decisions made were based on the goal of optimizing the implementation within the provided constraints.
