@@ -3,8 +3,12 @@
 ## Setup Instructions
 
 # 1. Clone the repository:
+<<<<<<< HEAD
 git clone <repository_url>
 cd FLASK-PROJ
+=======
+git clone https://github.com/RithuGowda55/flask-project.git
+>>>>>>> 79ab7245a22657e4763e1740e9ec6ca2d9ad80b2
 
 # 2. Install dependencies:
 Using Poetry:
@@ -18,12 +22,7 @@ Move to the app directory and run the app on port 5000:
 cd app
 flask --app app run --port 5000
 
-# 5. Run Unit Tests:
-Move to the test directory and run the tests on port 5001:
-cd test
-flask --app log_data run --port 5001
-
-# 6. Run Pre-commit Hooks:
+# 5. Run Pre-commit Hooks:
 To ensure code quality and style consistency, run pre-commit hooks:
 pre-commit run --all-files
 

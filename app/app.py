@@ -301,7 +301,8 @@ def partially_update_user(id):
         )
     else:
         return jsonify({"error": "User not found"}), 404
-    
+
+
 @app.route("/api/users/summary", methods=["GET"])
 def user_summary():
     try:
