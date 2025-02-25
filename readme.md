@@ -3,7 +3,7 @@
 ## Setup Instructions
 
 # 1. Clone the repository:
-git clone <repository_url> 
+git clone <repository_url>
 cd FLASK-PROJ
 
 # 2. Install dependencies:
@@ -70,10 +70,10 @@ curl -X PUT "$BASE_URL/1" \
     }'
 
 # 5. 🔄 Partially Update User by ID (PATCH)
-curl -X PATCH "$BASE_URL/1" \
+curl -X PATCH "$BASE_URL/11" \
     -H "Content-Type: application/json" \
     -d '{
-        "first_name": "Janet"
+        "first_name": "Janet-updated"
     }'
 
 # 6. ❌ Delete User by ID

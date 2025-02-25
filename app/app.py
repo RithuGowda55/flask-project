@@ -271,12 +271,46 @@ def delete_user(id):
 
 @app.route("/api/users/<int:id>", methods=["PATCH"])
 def partially_update_user(id):
+    data = request.json
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    # Dynamically create the SQL query based on the fields present in the request
+    set_clause = ", ".join([f"{key} = %s" for key in data.keys()])
+    values = list(data.values()) + [id]
+
+    query = f"UPDATE users SET {set_clause} WHERE id = %s RETURNING *"
+
+    try:
+        cur.execute(query, values)
+        updated_user = cur.fetchone()
+        conn.commit()
+    except Exception as e:
+        conn.rollback()
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cur.close()
+
+    if updated_user:
+        return (
+            jsonify({"message": "User updated successfully", "user": updated_user}),
+            200,
+        )
+    else:
+        return jsonify({"error": "User not found"}), 404
+    
+@app.route("/api/users/summary", methods=["GET"])
+def user_summary():
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute(
             """
-            SELECT city, COUNT(*) AS count, AVG(age) AS avg_age FROM users GROUP BY city;
+            SELECT city, COUNT(*) AS count, AVG(age) AS avg_age FROM users GROUP BY
+            city;
         """
         )
         summary = cursor.fetchall()
